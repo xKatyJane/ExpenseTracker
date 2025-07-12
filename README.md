@@ -8,7 +8,7 @@ A simple expense tracking application built in Python with a graphical user inte
 - SQLite (for local database storage)
 
 ## Description
-This application allows users to track their expenses through an intuitive and easy-to-use interface created with CustomTkinter. The expenses data is stored locally in an SQLite database, which is initialized with a setup script included in the project.
+This application allows users to track their expenses through an intuitive and easy-to-use interface created with Tkinter and CustomTkinter. The expenses data is stored locally in an SQLite database, which is initialized with a setup script included in the project.
 
 ## Features
 - **Add Expenses:** Enter expense details such as date, description, category, and amount.
@@ -21,7 +21,7 @@ This application allows users to track their expenses through an intuitive and e
 
 ### Prerequisites
 - Python 3.x installed on your machine
-- Required Python packages: `customtkinter`, `sqlite3` (sqlite3 comes with standard Python installation)
+- Required Python packages: `tkinter`, `customtkinter`, `CTkMessagebox`, `tkcalendar`, `sqlite3`, `matplotlib`, `seaborn`, `pillow`, `python-dateutil`, `requests`
 
 ### Installation
 1. Clone the repository:
@@ -52,13 +52,13 @@ python main.py
 </p>
 
 <h3 align="center">Adding a new expense.</h3>
-<p align="center">On clicking the ADD A NEW EXPENSE button, a new window opens, with places for data input. The data entered by the user is validated to ensure correct date format and a numerical value for the amount. The category can be either chosen from a list or a new value can be added. After adding a new category, it will be added to the existing categories list.</p>
+<p align="center">On clicking the ADD A NEW EXPENSE button, a new window opens, with places for data input. The data entered by the user is validated to ensure correct date format and a numerical value for the amount. The category can be either chosen from the existing list or a new value can be entered. If a new category is entered, it will be added to the existing categories list.</p>
 <p align="center">
   <img src="https://raw.githubusercontent.com/xKatyJane/ExpenseTracker/master/Assets/Screenshots/Adding_new_expense_2.png">
 </p>
 
 <h3 align="center">Deleting an expense.</h3>
-<p align="center">An expense can be deleted by clicking on it and then selecting the DELETE EXISTING EXPENSE button. A popup will show up, to confirm deleting the expense.</p>
+<p align="center">An expense can be deleted by clicking on it and then selecting the DELETE EXISTING EXPENSE button. A confirmation pop-up will show, to confirm deleting the expense.</p>
 <p align="center">
   <img src="https://raw.githubusercontent.com/xKatyJane/ExpenseTracker/master/Assets/Screenshots/Deleting_an_expense.png">
 </p>
