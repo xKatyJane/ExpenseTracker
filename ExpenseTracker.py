@@ -18,6 +18,8 @@ import threading
 import matplotlib.pyplot as plt
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 import seaborn as sns
+import requests
+from io import BytesIO
 
 
 class Adding_New_Expense_Window(ctk.CTkToplevel):
@@ -40,11 +42,14 @@ class Adding_New_Expense_Window(ctk.CTkToplevel):
         self.date_label = ctk.CTkLabel(self, text="Enter the date", font=("Helvetica", 17), text_color="white")
         self.date_label.grid(row=1, column=0, sticky="sew")
         self.date_entry = ctk.CTkEntry(self, fg_color="#34495e", border_color="#00bcd4", border_width=1)
-#        self.date_entry = ctk.CTkEntry(self, fg_color="#34495e", border_color="#00bcd4", border_width=1, validatecommand=self.realtime_validation_date, validate="focusout")
         self.date_entry.grid(row=2, column=0, sticky="nsew", padx=15, pady=15)
-        original_calendar_icon = Image.open("/Users/katia/Python_Projects/Expense Tracker - tkinter/calendar_icon.png").resize((40,40))
-        calendar_icon_tk = ImageTk.PhotoImage(original_calendar_icon)
-        self.date_button = ctk.CTkButton(self, text="", image=calendar_icon_tk, fg_color="#00bcd4", width=50, command=self.open_calendar)
+
+        self.original_calendar_icon_url ="https://raw.githubusercontent.com/xKatyJane/ExpenseTracker/master/Assets/calendar_icon.png"
+        self.response_calendar_icon = requests.get(self.original_calendar_icon_url)
+        self.calendar_icon_data = BytesIO(self.response_calendar_icon.content)
+        self.calendar_icon = Image.open(self.calendar_icon_data).resize((40,40))
+        self.calendar_icon_tk = ImageTk.PhotoImage(self.calendar_icon)
+        self.date_button = ctk.CTkButton(self, text="", image=self.calendar_icon_tk, fg_color="#00bcd4", width=50, command=self.open_calendar)
         self.date_button.grid(row=2, column=0, sticky="nse", padx=15, pady=15)
 
         # Description
