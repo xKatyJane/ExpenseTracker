@@ -28,7 +28,7 @@ This application allows users to track their expenses through an intuitive and e
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/ExpenseTracker.git
+git clone https://github.com/xKatyJane/ExpenseTracker.git
 ```
 
 2. Install the required packages if you haven’t already:
