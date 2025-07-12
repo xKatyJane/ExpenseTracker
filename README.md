@@ -22,6 +22,7 @@ This application allows users to track their expenses through an intuitive and e
 ### Prerequisites
 - Python 3.x installed on your machine
 - Required Python packages: `tkinter`, `customtkinter`, `CTkMessagebox`, `tkcalendar`, `sqlite3`, `matplotlib`, `seaborn`, `pillow`, `python-dateutil`, `requests`
+- Standard libraries (already included with Python): tkinter, sqlite3, datetime, os, time, threading, hashlib
 
 ### Installation
 1. Clone the repository:
@@ -30,15 +31,16 @@ This application allows users to track their expenses through an intuitive and e
 git clone https://github.com/yourusername/ExpenseTracker.git
 ```
 
-2. Install Tkinter and CustomTkinter if you haven’t already:
-
+2. Install the required packages if you haven’t already:
 ```bash
-pip install tkinter customtkinter
+pip install -r requirements.txt
 ```
+
 3. Run the initial database setup script to create the SQLite database and tables.
 ```bash
 python create_expenses_table.py
 ```
+
 4. Run the main application:
 ```bash
 python main.py
@@ -52,13 +54,13 @@ python main.py
 </p>
 
 <h3 align="center">Adding a new expense.</h3>
-<p align="center">On clicking the ADD A NEW EXPENSE button, a new window opens, with places for data input. The data entered by the user is validated to ensure correct date format and a numerical value for the amount. The category can be either chosen from the existing list or a new value can be entered. If a new category is entered, it will be added to the existing categories list.</p>
+<p align="center">When clicking the ADD A NEW EXPENSE button, a new window opens, with places for data input. The data entered by the user is validated to ensure correct date format and a numerical value for the amount. The category can be chosen from the existing list or a new value can be entered. If a new category is entered, it will be added to the existing categories list.</p>
 <p align="center">
   <img src="https://raw.githubusercontent.com/xKatyJane/ExpenseTracker/master/Assets/Screenshots/Adding_new_expense_2.png">
 </p>
 
 <h3 align="center">Deleting an expense.</h3>
-<p align="center">An expense can be deleted by clicking on it and then selecting the DELETE EXISTING EXPENSE button. A confirmation pop-up will show, to confirm deleting the expense.</p>
+<p align="center">To delete an expense, select it in the table and click the DELETE EXISTING EXPENSE button. A confirmation pop-up will show, to confirm deleting the expense.</p>
 <p align="center">
   <img src="https://raw.githubusercontent.com/xKatyJane/ExpenseTracker/master/Assets/Screenshots/Deleting_an_expense.png">
 </p>
