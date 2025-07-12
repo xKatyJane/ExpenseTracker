@@ -1,0 +1,8 @@
+customtkinter
+CTkMessagebox
+tkcalendar
+pillow
+python-dateutil
+matplotlib
+seaborn
+requests
