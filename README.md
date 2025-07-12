@@ -36,7 +36,17 @@ git clone https://github.com/yourusername/ExpenseTracker.git
 pip install tkinter customtkinter
 ```
 3. Run the initial database setup script to create the SQLite database and tables.
+```bash
+python create_expenses_table.py
+```
 4. Run the main application:
 ```bash
 python main.py
 ```
+
+## Screenshots
+
+<h4 align="center">The interface with expenses added.</h4>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/xKatyJane/ExpenseTracker/master/Assets/Screenshots/Interface_expenses.png" width="750">
+</p>
