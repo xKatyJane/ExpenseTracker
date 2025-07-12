@@ -43,7 +43,7 @@ python create_expenses_table.py
 
 4. Run the main application:
 ```bash
-python main.py
+python ExpenseTracker.py
 ```
 
 ## Screenshots
