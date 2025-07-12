@@ -46,13 +46,19 @@ python main.py
 
 ## Screenshots
 
-<h4 align="center">The interface with expenses added.</h4>
+<h3 align="center">The interface with expenses added.</h3>
 <p align="center">
   <img src="https://raw.githubusercontent.com/xKatyJane/ExpenseTracker/master/Assets/Screenshots/Interface_expenses.png">
 </p>
 
-<h4 align="center">The interface with expenses added.</h4>
-<p align="center">On clicking the ADD A NEW EXPENSE button, a new window opens, where data is added. The data entered by the user is validated to ensure correct date format and a numerical value for the amount. The category can be either chosen from a list or a new value can be added.</p>
+<h3 align="center">Adding a new expense.</h3>
+<p align="center">On clicking the ADD A NEW EXPENSE button, a new window opens, with places for data input. The data entered by the user is validated to ensure correct date format and a numerical value for the amount. The category can be either chosen from a list or a new value can be added. After adding a new category, it will be added to the existing categories list.</p>
 <p align="center">
-  <img src="https://raw.githubusercontent.com/xKatyJane/ExpenseTracker/master/Assets/Screenshots/Adding_new_expense_1.png">
+  <img src="https://raw.githubusercontent.com/xKatyJane/ExpenseTracker/master/Assets/Screenshots/Adding_new_expense_2.png">
+</p>
+
+<h3 align="center">Deleting an expense.</h3>
+<p align="center">An expense can be deleted by clicking on it and then selecting the DELETE EXISTING EXPENSE button. A popup will show up, to confirm deleting the expense.</p>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/xKatyJane/ExpenseTracker/master/Assets/Screenshots/Deleting_an_expense.png">
 </p>
