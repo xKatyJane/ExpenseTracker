@@ -50,3 +50,9 @@ python main.py
 <p align="center">
   <img src="https://raw.githubusercontent.com/xKatyJane/ExpenseTracker/master/Assets/Screenshots/Interface_expenses.png">
 </p>
+
+<h4 align="center">The interface with expenses added.</h4>
+<p align="center">On clicking the ADD A NEW EXPENSE button, a new window opens, where data is added. The data entered by the user is validated to ensure correct date format and a numerical value for the amount. The category can be either chosen from a list or a new value can be added.</p>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/xKatyJane/ExpenseTracker/master/Assets/Screenshots/Adding_new_expense_1.png">
+</p>
