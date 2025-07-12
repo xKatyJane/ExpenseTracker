@@ -1,10 +1,10 @@
 # Expense Tracker
 
-A simple expense tracking application built in Python with a graphical user interface using CustomTkinter.
+A simple expense tracking application built in Python with a graphical user interface using Tkinter and CustomTkinter.
 
 ## Technologies Used
 - Python
-- CustomTkinter (for the user interface)
+- Tkinter and CustomTkinter (for the user interface)
 - SQLite (for local database storage)
 
 ## Description
@@ -25,3 +25,18 @@ This application allows users to track their expenses through an intuitive and e
 
 ### Installation
 1. Clone the repository:
+
+```bash
+git clone https://github.com/yourusername/ExpenseTracker.git
+```
+
+2. Install Tkinter and CustomTkinter if you haven’t already:
+
+```bash
+pip install tkinter customtkinter
+```
+3. Run the initial database setup script to create the SQLite database and tables.
+4. Run the main application:
+```bash
+python main.py
+```
