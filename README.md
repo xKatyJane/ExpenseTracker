@@ -48,5 +48,5 @@ python main.py
 
 <h4 align="center">The interface with expenses added.</h4>
 <p align="center">
-  <img src="https://raw.githubusercontent.com/xKatyJane/ExpenseTracker/master/Assets/Screenshots/Interface_expenses.png" width="750">
+  <img src="https://raw.githubusercontent.com/xKatyJane/ExpenseTracker/master/Assets/Screenshots/Interface_expenses.png">
 </p>
