@@ -112,6 +112,7 @@ class Adding_New_Expense_Window(ctk.CTkToplevel):
 
     def get_date(self):
         ''' Fetches selected date and updates the label in the Add_New_Expense_Window '''
+
         selected_date = self.calendar.get_date()
         self.date_entry.delete(0, ctk.END)
         self.date_entry.insert(0, selected_date)
@@ -188,8 +189,6 @@ class Expense_Tracker(ctk.CTk):
         
         # Threading
         threading.Thread(target=self.check_for_updates, args=(current_hash, month, year), daemon=True).start()
-        
-#        self.toplevel_window = None
 
 
     def expense_summary(self):
@@ -264,7 +263,6 @@ class Expense_Tracker(ctk.CTk):
         # Expenses by category
         categories_text= "\n".join(categories_list)
         self.category_names.configure(text=categories_text)
-
         totals_str = [str(item)+" €" for item in totals_list]
         totals_text= "\n".join(totals_str)
         self.totals.configure(text=totals_text)
@@ -272,7 +270,7 @@ class Expense_Tracker(ctk.CTk):
         # Pie chart
         categories_list_modified = [list_item.replace(" ", "\n") for list_item in categories_list]
         self.ax.clear()
-        self.ax.pie(totals_list, labels=categories_list_modified, autopct='%1.1f%%', radius=1.05, labeldistance=1.1, pctdistance=0.55,  
+        self.ax.pie(totals_list, labels=categories_list_modified, autopct='%1.1f%%', radius=1.1, labeldistance=1.1, pctdistance=0.6, startangle=90,
                textprops={"fontfamily" : "Helvetica" ,"fontsize" : 6, "color" : "white"})
         circle = plt.Circle(xy=(0,0), radius=.85, facecolor="#17202a")
         plt.gca().add_artist(circle)
@@ -348,11 +346,16 @@ class Expense_Tracker(ctk.CTk):
 
         style.configure("Treeview.Heading", font=("Helvetica", 18), foreground="#00bcd4", background="black",
                         padding=(20,20), borderwidth=0, relief="solid")
+        
+        style.map("Treeview",
+          background=[('selected', '#00bcd4')],
+          foreground=[('selected', 'black')])
 
 
     def define_current_month(self):
         ''' Fetches the current month for the initial display '''
         global month, year
+
         month = datetime.now().strftime("%m")
         year = str(datetime.now().year)
         return month, year
@@ -439,10 +442,10 @@ class Expense_Tracker(ctk.CTk):
             else:
                 month, year = self.month_being_displayed(current_month_str)
                 current_table_data, categories_list, totals_list = self.retrieve_data(month, year)
-                self.populate_table(current_table_data)                 # update the main table
-                self.update_pie_chart_and_summary(month, year)          # update pie chart and expenses by category
+                self.populate_table(current_table_data)
+                self.update_pie_chart_and_summary(month, year)
             current_hash = new_hash
-            time.sleep(5)
+            time.sleep(2)
 
 
     def retrieve_previous_month(self, current_month_str):
@@ -500,7 +503,6 @@ class Expense_Tracker(ctk.CTk):
             self.toplevel_window = Adding_New_Expense_Window(self)
         else:
             self.toplevel_window.focus()
-
 
 
 if __name__ == "__main__":
